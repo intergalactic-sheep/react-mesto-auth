@@ -66,7 +66,7 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
-  }, [token]);
+  }, []);
 
 
   function handleLogin(dataLogin) {
@@ -75,6 +75,7 @@ function App() {
       .then((dataUser) => {
         localStorage.setItem("jwt", dataUser.token);
         setLoginStatus(true);
+        setUserData(dataLogin);
         setIsLoggedIn(true);
         navigate("/");
       })
