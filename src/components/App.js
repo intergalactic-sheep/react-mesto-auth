@@ -37,7 +37,7 @@ function App() {
   const [cards, setCards] = useState([]);
 
   const navigate = useNavigate();
-  const token = localStorage.getItem("jwt");
+  const token = localStorage.getItem('jwt');
 
   useEffect(() => {
     if (isLoggedIn) {
@@ -61,11 +61,13 @@ function App() {
       .then((userData) => {
         setUserData(userData.data);
         setIsLoggedIn(true);
+        navigate("/");
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [token]);
+
 
   function handleLogin(dataLogin) {
     auth
@@ -74,7 +76,7 @@ function App() {
         localStorage.setItem("jwt", dataUser.token);
         setLoginStatus(true);
         setIsLoggedIn(true);
-        navigate('/');
+        navigate("/");
       })
       .catch((err) => {
         console.log(err);
@@ -86,8 +88,8 @@ function App() {
     auth
       .register(dataRegister)
       .then(() => {
-        setLoginStatus(true);
         setIsInfoTooltipPopupOpen(true);
+        setLoginStatus(true);
         navigate("/sign-in", { replace: true });
       })
       .catch((err) => {
@@ -101,7 +103,7 @@ function App() {
     setIsLoggedIn(false);
     setUserData({});
     navigate("/sign-in");
-  }
+  };
 
   function handleEditAvatarClick() {
     setIsEditAvatarOpen(true);
@@ -206,39 +208,29 @@ function App() {
           <Route
             path="/"
             element={
-              <ProtectedRoute user={userData}>
-                <Main
-                  loggedIn={isLoggedIn}
-                  onEditProfile={handleEditProfileClick}
-                  onAddPlace={handleAddPlaceClick}
-                  onEditAvatar={handleEditAvatarClick}
-                  onCardClick={handleCardClick}
-                  onCardLike={handleCardLike}
-                  onCardDelete={handleDeleteButtonClick}
-                  cards={cards}
-                />
-              </ProtectedRoute>
+              <ProtectedRoute
+                loggedIn={isLoggedIn}
+                element={Main}
+                onEditProfile={handleEditProfileClick}
+                onAddPlace={handleAddPlaceClick}
+                onEditAvatar={handleEditAvatarClick}
+                onCardClick={handleCardClick}
+                onCardLike={handleCardLike}
+                onCardDelete={handleDeleteButtonClick}
+                cards={cards}
+                userData={userData}
+              />
             }
           />
           <Route
             path="/sign-up"
             element={
-              <ProtectedRoute
-                user={userData}
-                isLoggedIn={isLoggedIn}
-                onlyUnAuth={true}
-              >
-                <Register onRegister={handleRegister} />
-              </ProtectedRoute>
+              <Register onRegister={handleRegister} isLoggedIn={isLoggedIn} />
             }
           />
           <Route
             path="/sign-in"
-            element={
-              <ProtectedRoute user={userData} onlyUnAuth={true}>
-                <Login onLogin={handleLogin} />
-              </ProtectedRoute>
-            }
+            element={<Login onLogin={handleLogin} isLoggedIn={isLoggedIn} />}
           />
           <Route
             path="/*"
@@ -281,11 +273,7 @@ function App() {
           isOpen={isImagePopupOpen}
           onClose={closeAllPopups}
         />
-        <InfoTooltip
-          onClose={closeAllPopups}
-          isOpen={isInfoTooltipPopupOpen}
-          loginStatus={loginStatus}
-        />
+        <InfoTooltip onClose={closeAllPopups} isOpen={isInfoTooltipPopupOpen} loginStatus={loginStatus} />
       </div>
     </CurrentUserContext.Provider>
   );
