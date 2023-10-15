@@ -4,7 +4,11 @@
   font-size: 42px;
   font-weight: 500;
   line-height: 48px;
+<<<<<<< HEAD
   max-width: 480px;
+=======
+  max-width: 500px;
+>>>>>>> 8a44292ad9806b3533904770c866cf55619e8402
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
