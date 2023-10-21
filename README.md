@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Место / Mesto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Проект "Место" направлен на подробное изучение основ создания логики на базе языка программирования JavaScript и библиотеки React.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+The "Mesto" project is aimed at a detailed study of the basics of creating logic based on the JavaScript programming language and React Library.
 
-### `npm start`
+## Технологии / Technologies
+Приложение было написано с использованием множества опций, предлагаемых библиотекой React: хуков useState, useEffect и др.; JSX-разметки; декларативного подхода к написанию кода. Также использовались сторонние библиотеки, например, React Router и React Hook Form. В качестве практики для работы с сервером была написана система авторизации по JWT-токену, а также функции обновления данных пользователя и массива карточек.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
+The application was built using a variety of options provided by the React library, such as the useState and useEffect hooks, JSX markup, and a declarative approach to writing code. Third-party libraries were also utilized, for example, React Router and React Hook Form. As a practice for working with the server, an authentication system was implemented using a JWT token, along with functions for updating user data and an array of cards.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Развитие / Development
+В будущем для развития проекта планируется:
+1. Создать больше страниц, переход по которым будет осуществляться либо через навигационное меню, либо через гиперссылки на странице.
+2. Продумать плавную анимацию скроллинга с использованием скриптов JavaScript, отслеживающих положение пользователя на сайте.
+3. Добавить функционал современных приложений социальных сетей.
 
-### `npm test`
+---
+In the future, to develop the project we plan:
+1. To create more pages that can be visited through either the navigation menu or hyperlinks on the page.
+2. To think over the smooth scrolling animation using JavaScript scripts that track the user's position on the site.
+3. To add the functionality of modern apps of social networks.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Участие в разработке / Contributing
 
-### `npm run build`
+Перед оформлением запроса на пулл, пожалуйста, укажите в соответствующей беседе необходимость ваших доработок и предоставьте базовый план их реализации. Участие сторонних разработчиков всегда приветствуется!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Пожалуйста, в процессе разработки следите за актуальной версией проекта!
+---
+Before making a pull request, please indicate in the appropriate conversation the need for your improvements and provide a basic plan for their implementation. Third party developers are always welcome!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Please, during the working process follow the actual version of the project!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Ссылка на GitHub Pages / GitHub Pages URL
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://intergalactic-sheep.github.io/mesto/
